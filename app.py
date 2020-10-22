@@ -9,7 +9,7 @@ DEBUG_MODE = True
 
 
 
-@app.route('/')
+@app.route('/ibsHW')
 def ibsHW():
     return render_template("ibsHW.html")
 
