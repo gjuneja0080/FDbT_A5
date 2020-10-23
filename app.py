@@ -1,8 +1,15 @@
 from flask import Flask, render_template
 import os
-app = Flask(__name__)
+#from flask_sqlalchemy import SQLAlchemy
+#from sqlalchemy.orm import relationship
+#from sqlalchemy import Table, Column, Integer, ForeignKey
 
-HOST = '127.0.0.1'
+
+app = Flask(__name__)
+#app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://imperial:imperial-fdt-online-2019-colossal-shelf@imperial-2020.ckp3dl3vzxoh.eu-west-2.rds.amazonaws.com/dvdrental'
+#db = SQLAlchemy(app)
+
+HOST = '0.0.0.0'
 PORT = int(os.environ.get('PORT', 5000))
 DEBUG_MODE = True
 
