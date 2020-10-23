@@ -4,9 +4,12 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship
 from sqlalchemy import Table, Column, Integer, ForeignKey
 
+HOST = '0.0.0.0'
+PORT = int(os.environ.get('PORT', 5000))
+DEBUG_MODE = True
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://imperial:imperial-fdt-online-2019-colossal-shelf@imperial-2020.ckp3dl3vzxoh.eu-west-2.rds.amazonaws.com/dvdrental'
+app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://imperial:imperial@imperial.ckp3dl3vzxoh.eu-west-2.rds.amazonaws.com/dvdrental'
 db = SQLAlchemy(app)
 
 class Inventory(db.Model):
@@ -29,10 +32,6 @@ class Film(db.Model):
 
   def __repr__(self):
     return 'FILM: title is ' + self.title
-
-HOST = '0.0.0.0'
-PORT = int(os.environ.get('PORT', 5000))
-DEBUG_MODE = True
 
 @app.route('/')
 def ibsHW():
