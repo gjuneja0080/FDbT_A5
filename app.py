@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 import os
-app = Flask(__name__, template_folder="/Users/gopaljuneja/Desktop/Assignment5/server/templates/")
+app = Flask(__name__)
 
 HOST = '127.0.0.1'
 PORT = int(os.environ.get('PORT', 5000))
