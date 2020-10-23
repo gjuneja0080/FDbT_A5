@@ -9,7 +9,7 @@ PORT = int(os.environ.get('PORT', 5000))
 DEBUG_MODE = True
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://imperial:imperial@imperial.ckp3dl3vzxoh.eu-west-2.rds.amazonaws.com/dvdrental'
+app.config["SQLALCHEMY_DATABASE_URI"] = '"postgres://imperial:imperial-fdt-online-2019-colossal-shelf@imperial-2020.ckp3dl3vzxoh.eu-west-2.rds.amazonaws.com:5432/dvdrental"'
 db = SQLAlchemy(app)
 
 class Inventory(db.Model):
