@@ -1,0 +1,24 @@
+<style>
+    body{
+      font-family: 'Times New Roman';
+    }
+    </style>
+    
+    <h1>Actor Table Data: <h1>
+    
+    <!-- <p>
+    List of films!
+    </p> -->
+    
+    <table border="1">
+
+    {% for actor in actors %}
+        <tr>
+        <td>{{ actor_id.film_id }}</td>
+        <td>{{ actor_id.first_name }}</td>
+        <td>{{ actor_id.last_name }}</td>
+        <td>{{ actor_id.last_update }}</td>
+        </tr>
+    {% endfor %}
+    
+    </table>
