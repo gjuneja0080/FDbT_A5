@@ -3,22 +3,25 @@
       font-family: 'Times New Roman';
     }
     </style>
-    
     <h1>Actor Table Data: <h1>
-    
-    <!-- <p>
-    List of films!
-    </p> -->
-    
+        <nav role="navigation">
+            <ul class="nav-ul">
+            <li><a href="home">Home</a></li>
+            </ul>
+        </nav>
     <table border="1">
-
-    {% for actor in actors %}
         <tr>
-        <td>{{ actor_id.film_id }}</td>
-        <td>{{ actor_id.first_name }}</td>
-        <td>{{ actor_id.last_name }}</td>
-        <td>{{ actor_id.last_update }}</td>
+            <th>Actor ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Last Updated</th>
+        </tr>
+    {% for actor in actors %}   
+        <tr>
+            <td>{{ actor.actor_id }}</td>
+            <td>{{ actor.first_name }}</td>
+            <td>{{ actor.last_name }}</td>
+            <td>{{ actor.last_update }}</td>
         </tr>
     {% endfor %}
-    
     </table>
